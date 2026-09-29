@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Charitics - NGO & Non Profit</title>
+
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="css/flaticon_charitics.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: static !important;
+            min-height: 100vh !important;
+            width: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-family: var(--font-manrope, sans-serif) !important;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.82) 0%, rgba(30, 37, 47, 0.88) 100%), url('images/breadcrumb-bg.webp') center/cover no-repeat fixed !important;
+            background-size: cover !important;
+            background-position: center !important;
+            padding: 0 !important;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        #preloader {
+            display: none !important;
+        }
+
+        .auth-page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+            box-sizing: border-box;
+        }
+
+        .auth-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
+            border: none;
+            width: 100%;
+            max-width: 500px;
+            padding: clamp(28px, 4vw, 42px);
+            margin: auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .role-btn-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .role-btn-group input[type="radio"] {
+            display: none;
+        }
+
+        .role-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 6px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 600;
+            font-size: 13px;
+            color: #4b5563;
+            background: #f9fafb;
+        }
+
+        .role-label i {
+            font-size: 20px;
+            margin-bottom: 4px;
+            color: #6b7280;
+        }
+
+        .role-btn-group input[type="radio"]:checked + .role-label {
+            border-color: var(--ul-primary, #EB5310);
+            background: rgba(235, 83, 16, 0.07);
+            color: var(--ul-primary, #EB5310);
+        }
+
+        .role-btn-group input[type="radio"]:checked + .role-label i {
+            color: var(--ul-primary, #EB5310);
+        }
+
+        .form-floating-custom {
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .form-floating-custom label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 12px 42px 12px 15px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        .input-wrapper input:focus {
+            border-color: var(--ul-primary, #EB5310);
+            box-shadow: 0 0 0 3px rgba(235, 83, 16, 0.15);
+        }
+
+        .input-wrapper .toggle-pw {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #6b7280;
+            font-size: 14px;
+            padding: 0;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            background: var(--ul-primary, #EB5310);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-submit:hover {
+            background: #d64708;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .auth-footer-links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .auth-footer-links a {
+            color: var(--ul-primary, #EB5310);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .auth-footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            font-size: 13px;
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-home-link:hover {
+            color: var(--ul-primary, #EB5310);
+        }
+
+        @media screen and (max-width: 480px) {
+            .auth-page-wrapper {
+                padding: 20px 12px;
+            }
+
+            .auth-card {
+                padding: 24px 18px;
+                border-radius: 20px;
+            }
+
+            .role-btn-group {
+                gap: 6px;
+            }
+
+            .role-label {
+                padding: 10px 4px;
+                font-size: 12px;
+            }
+
+            .role-label i {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-page-wrapper">
+        <div class="auth-card">
+            <div class="text-center mb-4">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <img src="images/logo-stackly-orange.webp" alt="Stackly Logo" style="max-height: 48px;">
+                </a>
+                <h3 style="font-weight: 800; color: #1e252f; margin-bottom: 6px;">Create an Account</h3>
+                <p style="color: #6b7280; font-size: 14px; margin-bottom: 0;">Join the cause as a Donor, Volunteer or Admin</p>
+            </div>
+
+            <form id="register-form" novalidate>
+                <!-- Full Name -->
+                <div class="form-floating-custom">
+                    <label for="reg-name">Full Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="reg-name" placeholder="John Doe" required autocomplete="name">
+                    </div>
+                    <div class="error-message" id="name-error">Please enter your full name (letters only).</div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-floating-custom">
+                    <label for="reg-phone">Phone Number</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="reg-phone" placeholder="9876543210" maxlength="15" required autocomplete="tel" inputmode="numeric">
+                    </div>
+                    <div class="error-message" id="phone-error">Please enter a valid phone number (digits only).</div>
+                </div>
+
+                <!-- Role Selector -->
+                <label class="form-label" style="font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 8px; display: block;">Select Your Role</label>
+                <div class="role-btn-group">
+                    <div>
+                        <input type="radio" name="user-role" id="role-admin" value="admin">
+                        <label for="role-admin" class="role-label">
+                            <i class="flaticon-account"></i>
+                            <span>Admin</span>
+                        </label>
+                    </div>
+                <div>
+                    <input type="radio" name="user-role" id="role-donor" value="donor" checked>
+                    <label for="role-donor" class="role-label">
+                        <i class="flaticon-costumer"></i>
+                        <span>Donor</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="user-role" id="role-volunteer" value="volunteer">
+                    <label for="role-volunteer" class="role-label">
+                        <i class="flaticon-team"></i>
+                        <span>Volunteer</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-floating-custom">
+                <label for="reg-email">Email Address</label>
+                <div class="input-wrapper">
+                    <input type="email" id="reg-email" placeholder="example@domain.com" required autocomplete="email">
+                </div>
+                <div class="error-message" id="email-error">Please enter a valid email address.</div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-floating-custom">
+                <label for="reg-password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="reg-password" placeholder="••••••••" required autocomplete="new-password">
+                    <button type="button" class="toggle-pw" id="toggle-password" title="Show/Hide Password">👁</button>
+                </div>
+                <div class="error-message" id="password-error">Password must be at least 6 characters.</div>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="form-floating-custom">
+                <label for="reg-confirm-password">Confirm Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="reg-confirm-password" placeholder="••••••••" required autocomplete="new-password">
+                </div>
+                <div class="error-message" id="confirm-error">Passwords do not match.</div>
+            </div>
+
+            <button type="submit" class="btn-submit mt-2">
+                <i class="flaticon-fast-forward-double-right-arrows-symbol" style="margin-right: 6px;"></i> Create Account & Proceed
+            </button>
+        </form>
+
+        <div class="auth-footer-links">
+            Already have an account? <a href="login.html">Login here</a>
+            <div>
+                <a href="index.html" class="back-home-link">
+                    <span>← Return to Home</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Libraries JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.body.style.position = 'static';
+        document.addEventListener("DOMContentLoaded", () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) preloader.style.display = 'none';
+
+            const nameInput = document.getElementById('reg-name');
+            const phoneInput = document.getElementById('reg-phone');
+            const emailInput = document.getElementById('reg-email');
+            const passwordInput = document.getElementById('reg-password');
+            const confirmInput = document.getElementById('reg-confirm-password');
+            const togglePwBtn = document.getElementById('toggle-password');
+            const form = document.getElementById('register-form');
+
+            const nameError = document.getElementById('name-error');
+            const phoneError = document.getElementById('phone-error');
+            const emailError = document.getElementById('email-error');
+            const passwordError = document.getElementById('password-error');
+            const confirmError = document.getElementById('confirm-error');
+
+            togglePwBtn.addEventListener('click', () => {
+                const isPw = passwordInput.type === 'password';
+                passwordInput.type = isPw ? 'text' : 'password';
+                togglePwBtn.textContent = isPw ? '🙈' : '👁';
+            });
+
+            // Prevent typing numbers in Name field
+            nameInput.addEventListener('keydown', (e) => {
+                // Allow control/nav keys
+                if (e.ctrlKey || e.altKey || e.metaKey || e.key.length > 1) return;
+                // Disallow digits 0-9
+                if (/[0-9]/.test(e.key)) {
+                    e.preventDefault();
+                }
+            });
+
+            // Strip numbers if pasted or autofilled in Name field
+            nameInput.addEventListener('input', () => {
+                const sanitized = nameInput.value.replace(/[0-9]/g, '');
+                if (nameInput.value !== sanitized) {
+                    nameInput.value = sanitized;
+                }
+                nameError.style.display = 'none';
+            });
+
+            // Prevent typing text/letters in Phone/Number field (allow only digits)
+            phoneInput.addEventListener('keydown', (e) => {
+                // Allow control/nav keys (Backspace, Tab, Enter, Arrows, Delete, etc.)
+                if (e.ctrlKey || e.altKey || e.metaKey || e.key.length > 1) return;
+                // Disallow non-digits
+                if (!/^[0-9]$/.test(e.key)) {
+                    e.preventDefault();
+                }
+            });
+
+            // Strip non-digits if pasted or autofilled in Phone/Number field
+            phoneInput.addEventListener('input', () => {
+                const sanitized = phoneInput.value.replace(/[^0-9]/g, '');
+                if (phoneInput.value !== sanitized) {
+                    phoneInput.value = sanitized;
+                }
+                phoneError.style.display = 'none';
+            });
+
+            passwordInput.addEventListener('input', () => {
+                passwordError.style.display = 'none';
+            });
+
+            emailInput.addEventListener('input', () => {
+                emailError.style.display = 'none';
+            });
+
+            confirmInput.addEventListener('input', () => {
+                confirmError.style.display = 'none';
+            });
+
+            function isValidEmail(val) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+            }
+
+            function isValidPhone(val) {
+                return /^[0-9]{7,15}$/.test(val.trim());
+            }
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+                const confirmPw = confirmInput.value;
+                const selectedRoleEl = document.querySelector('input[name="user-role"]:checked');
+                const selectedRole = selectedRoleEl ? selectedRoleEl.value : 'donor';
+
+                let valid = true;
+
+                if (!name || /[0-9]/.test(name) || name.length < 2) {
+                    nameError.textContent = /[0-9]/.test(name) 
+                        ? 'Numbers are not allowed in name.' 
+                        : 'Please enter your full name.';
+                    nameError.style.display = 'block';
+                    nameInput.focus();
+                    valid = false;
+                } else {
+                    nameError.style.display = 'none';
+                }
+
+                if (!isValidPhone(phone)) {
+                    phoneError.textContent = 'Please enter a valid phone number (digits only).';
+                    phoneError.style.display = 'block';
+                    if (valid) phoneInput.focus();
+                    valid = false;
+                } else {
+                    phoneError.style.display = 'none';
+                }
+
+                if (!isValidEmail(email)) {
+                    emailError.style.display = 'block';
+                    if (valid) emailInput.focus();
+                    valid = false;
+                } else {
+                    emailError.style.display = 'none';
+                }
+
+                if (!password || password.length < 6) {
+                    passwordError.textContent = 'Password must be at least 6 characters.';
+                    passwordError.style.display = 'block';
+                    if (valid) passwordInput.focus();
+                    valid = false;
+                } else {
+                    passwordError.style.display = 'none';
+                }
+
+                if (password !== confirmPw) {
+                    confirmError.style.display = 'block';
+                    if (valid) confirmInput.focus();
+                    valid = false;
+                } else {
+                    confirmError.style.display = 'none';
+                }
+
+                if (!valid) return;
+
+                const authData = {
+                    isLoggedIn: true,
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    role: selectedRole,
+                    loginTime: new Date().toISOString()
+                };
+                localStorage.setItem('charitics_auth', JSON.stringify(authData));
+
+                const submitBtn = form.querySelector('.btn-submit');
+                submitBtn.textContent = 'Account Created! Redirecting...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    window.location.href = `dashboard.html?role=${selectedRole}`;
+                }, 400);
+            });
+        });
+    </script>
+</body>
+
+</html>
