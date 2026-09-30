@@ -33,8 +33,8 @@
 
 
     <!-- custom CSS -->
-
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sub-pages.css">
 
 </head>
 
@@ -350,7 +350,7 @@
 
             <div class="ul-inner-contact-container">
 
-                <form action="404.html" class="ul-contact-form ul-form">
+                <form action="#" class="ul-contact-form ul-form" id="contactForm">
 
                     <div class="row row-cols-2 row-cols-xxs-1 ul-bs-row">
 
@@ -358,7 +358,7 @@
 
                             <div class="form-group">
 
-                                <input type="text" name="name" id="ul-contact-name" placeholder="Your Name">
+                                <input type="text" name="name" id="ul-contact-name" placeholder="Your Name" required>
 
                             </div>
 
@@ -368,7 +368,27 @@
 
                             <div class="form-group">
 
-                                <input type="email" name="email" id="ul-contact-email" placeholder="Email Address">
+                                <input type="email" name="email" id="ul-contact-email" placeholder="Email Address" required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="form-group">
+
+                                <input type="tel" name="phone" id="ul-contact-phone" placeholder="Mobile Number (Numbers only)" inputmode="numeric" maxlength="15" oninput="this.value = this.value.replace(/[^0-9+ -]/g, '')" required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="form-group">
+
+                                <input type="text" name="subject" id="ul-contact-subject" placeholder="Subject" required>
 
                             </div>
 
@@ -378,17 +398,7 @@
 
                             <div class="form-group">
 
-                                <input type="text" name="subject" id="ul-contact-subject" placeholder="Subject">
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-12">
-
-                            <div class="form-group">
-
-                                <textarea name="message" id="ul-contact-msg" placeholder="Type your message"></textarea>
+                                <textarea name="message" id="ul-contact-msg" placeholder="Type your message" required></textarea>
 
                             </div>
 
@@ -396,7 +406,9 @@
 
                         <div class="col-12 text-center">
 
-                            <button class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Get in Touch</button>
+                            <div id="contactFormAlert" style="display:none; margin-bottom: 18px; padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: 14px;"></div>
+
+                            <button type="submit" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Get in Touch</button>
 
                         </div>
 
@@ -409,6 +421,92 @@
         </section>
 
         <!-- CONTACT SECTION END -->
+
+
+
+        <!-- SECTION 4: CONTACT & SUPPORT FAQS START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Quick Answers</span>
+                    <h2 class="ul-section-title">Frequently Asked Support & Partnership Questions</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">Have an urgent question about donations, volunteer applications, or visiting our field programs? Find quick answers below.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="ul-accordion">
+                            <div class="ul-single-accordion-item open">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">How quickly will someone respond to my inquiry?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>Our community helpdesk operates Monday through Saturday. All standard web form inquiries receive a response within 12 to 24 business hours. Urgent disaster reports received via our crisis hotline are dispatched immediately.</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-single-accordion-item">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">How can our company or brand partner for CSR sponsorships?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>We work with national and global corporate partners on matching gift programs, sponsored school construction, and employee volunteer days. Select "Corporate Partnership" in the message form above or email directly to partnerships@stackly.org.</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-single-accordion-item">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">Can donors visit the field relief sites in person?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>Yes. We organize quarterly verified donor exposure trips to our school centers, pediatric health clinics, and clean water wells. Please reach out at least 30 days in advance so our field security team can arrange permits and lodging.</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-single-accordion-item">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">Where can I access your annual financial and audit reports?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>Our complete audited financial statements, tax 990 filings, and third-party impact assessments are publicly downloadable from our governance portal or by requesting a copy through our contact form.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 4: FAQS END -->
+
+
+
+        <!-- SECTION 5: RAPID RESPONSE CRISIS HELPLINE BANNER START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="sub-hotline-banner">
+                    <div class="row align-items-center gy-4">
+                        <div class="col-lg-8">
+                            <span class="badge" style="background: rgba(235, 83, 16, 0.25); color: #ff6f2d; padding: 6px 14px; border-radius: 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">24/7 Rapid Emergency Response</span>
+                            <h2 style="font-family: var(--font-quicksand); font-size: clamp(24px, 2.8vw, 38px); font-weight: 700; color: #ffffff; margin-top: 12px; margin-bottom: 8px;">Reporting A Critical Local Disaster Or Urgent Community Need?</h2>
+                            <p style="color: #cbd5e1; font-size: 15px; margin-bottom: 16px;">Our rapid-deployment field squadrons are on standby 24 hours a day to provide emergency water, hot rations, and medical evacuation across our regional chapter networks.</p>
+                            <a href="tel:+442045770077" class="sub-hotline-number"><i class="flaticon-phone-call"></i> +44 204 577 0077</a>
+                            <div style="font-size: 13px; color: #94a3b8;">Toll-free humanitarian emergency dispatch line (Multi-language support)</div>
+                        </div>
+                        <div class="col-lg-4 text-lg-end text-start">
+                            <div class="d-flex flex-column gap-3 align-items-lg-end align-items-start">
+                                <a href="https://wa.me/442045770077" class="ul-btn" style="background: #25d366; border-color: #25d366; padding: 14px 24px; font-weight: 700;"><i class="flaticon-comment"></i> Chat On WhatsApp</a>
+                                <a href="donations.html" class="ul-btn" style="background: transparent; border: 1.5px solid #ffffff; color: #ffffff; padding: 14px 24px; font-weight: 700;"><i class="flaticon-love"></i> Support Emergency Fund</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 5: CRISIS HELPLINE END -->
 
     </main>
 
@@ -448,7 +546,7 @@
 
                             <span class="ul-footer-top-contact-info-label">Address</span>
 
-                            <h5 class="ul-footer-top-contact-info-address">4648 Rocky Road Philadelphia PA, 1920</h5>
+                            <h5 class="ul-footer-top-contact-info-address">Salem, Chinna Thirupathi, Tamil Nadu</h5>
 
                         </div>
 
@@ -767,9 +865,73 @@
     <!-- <script src="assets/js/countdown.js"></script> -->
 
     <script src="js/accordion.js"></script>
-
     <script src="js/progressbar.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const phoneInput = document.getElementById('ul-contact-phone');
+            if (phoneInput) {
+                // Disallow typing alphabets or any invalid characters
+                phoneInput.addEventListener('keydown', function (e) {
+                    // Allow navigation / system keys
+                    const allowedSystemKeys = ['Backspace', 'Delete', 'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight', 'Home', 'End'];
+                    if (allowedSystemKeys.includes(e.key)) return;
+                    if (e.ctrlKey || e.metaKey) return; // Allow copy, paste, select all
+
+                    // Block alphabets (a-z, A-Z) and symbols other than numbers, plus, hyphen
+                    if (!/^[0-9+ -]$/.test(e.key)) {
+                        e.preventDefault();
+                    }
+                });
+
+                // Sanitize any input (drag-drop, voice, IME, autofill)
+                phoneInput.addEventListener('input', function () {
+                    this.value = this.value.replace(/[^0-9+ -]/g, '');
+                });
+
+                // Handle paste event
+                phoneInput.addEventListener('paste', function (e) {
+                    e.preventDefault();
+                    const text = (e.clipboardData || window.clipboardData).getData('text');
+                    const cleanText = text.replace(/[^0-9+ -]/g, '');
+                    document.execCommand('insertText', false, cleanText);
+                });
+            }
+
+            // Contact Form Submit Handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const phone = phoneInput ? phoneInput.value.trim() : '';
+                    const alertBox = document.getElementById('contactFormAlert');
+                    
+                    // Validate phone has at least 7 digits
+                    const digitsOnly = phone.replace(/[^0-9]/g, '');
+                    if (digitsOnly.length < 7) {
+                        if (alertBox) {
+                            alertBox.style.display = 'block';
+                            alertBox.style.background = 'rgba(239, 68, 68, 0.12)';
+                            alertBox.style.color = '#dc2626';
+                            alertBox.style.border = '1px solid #ef4444';
+                            alertBox.innerHTML = 'Please enter a valid mobile number (at least 7-10 digits).';
+                        }
+                        phoneInput.focus();
+                        return;
+                    }
+
+                    if (alertBox) {
+                        alertBox.style.display = 'block';
+                        alertBox.style.background = 'rgba(16, 185, 129, 0.15)';
+                        alertBox.style.color = '#065f46';
+                        alertBox.style.border = '1px solid #10b981';
+                        alertBox.innerHTML = '<i class="flaticon-check"></i> Thank you! Your message has been received. Our team will contact you shortly.';
+                    }
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
 </body>
 
 

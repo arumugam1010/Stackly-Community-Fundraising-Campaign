@@ -1,0 +1,537 @@
+/* ========================================================
+   SUB-PAGES ENHANCED 5-CONTENT-SECTION DESIGN SYSTEM
+   ======================================================== */
+
+/* Process / Step Cards */
+.sub-process-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 32px 24px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sub-process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(235, 83, 16, 0.08);
+  border-color: rgba(235, 83, 16, 0.3);
+}
+.sub-process-card .step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(235, 83, 16, 0.1);
+  color: var(--ul-primary);
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.sub-process-card .step-title {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 12px;
+}
+.sub-process-card .step-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ul-gray);
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* Modern Stats / KPI Cards */
+.sub-kpi-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+  height: 100%;
+}
+.sub-kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-kpi-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(235, 83, 16, 0.12), rgba(235, 83, 16, 0.04));
+  color: var(--ul-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.sub-kpi-value {
+  font-family: var(--font-quicksand);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ul-black);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.sub-kpi-label {
+  font-size: 14px;
+  color: var(--ul-gray);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Transparency & Fund Breakdown Cards */
+.sub-transparency-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 32px 28px;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sub-transparency-card:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+  border-color: var(--ul-primary);
+}
+.sub-transparency-card .pct-badge {
+  font-family: var(--font-quicksand);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--ul-primary);
+  display: block;
+  margin-bottom: 8px;
+}
+.sub-transparency-card .card-title {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 12px;
+}
+.sub-transparency-card .card-desc {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.sub-transparency-card .card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sub-transparency-card .card-list li {
+  font-size: 13.5px;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.sub-transparency-card .card-list li i {
+  color: #10b981;
+  font-size: 14px;
+}
+
+/* Quick Donation Box Matrix */
+.sub-quick-donate-box {
+  background: linear-gradient(135deg, #1e252f, #151b22);
+  border-radius: 20px;
+  padding: clamp(30px, 4vw, 50px);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.sub-quick-donate-box::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(235, 83, 16, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.sub-amount-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.sub-amount-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.sub-amount-btn:hover, .sub-amount-btn.active {
+  background: var(--ul-primary);
+  border-color: var(--ul-primary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(235, 83, 16, 0.35);
+}
+
+/* Testimonial & Story Cards */
+.sub-story-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+  padding: 32px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.sub-story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.3);
+}
+.sub-story-stars {
+  color: #f59e0b;
+  margin-bottom: 14px;
+  font-size: 14px;
+  display: flex;
+  gap: 4px;
+}
+.sub-story-quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+.sub-story-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sub-story-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ul-primary);
+}
+.sub-story-name {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ul-black);
+  margin-bottom: 2px;
+}
+.sub-story-role {
+  font-size: 13px;
+  color: var(--ul-gray);
+  margin-bottom: 0;
+}
+
+/* Highlight & Event Recap Cards */
+.sub-highlight-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  transition: all 0.35s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sub-highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+}
+.sub-highlight-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.sub-highlight-body {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sub-highlight-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--ul-primary);
+  background: rgba(235, 83, 16, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+.sub-highlight-title {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 10px;
+}
+.sub-highlight-desc {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.55;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* Speaker / Advocate Cards */
+.sub-speaker-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.sub-speaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-speaker-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 3px solid rgba(235, 83, 16, 0.15);
+}
+.sub-speaker-name {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 4px;
+}
+.sub-speaker-role {
+  font-size: 13px;
+  color: var(--ul-primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+.sub-speaker-bio {
+  font-size: 13.5px;
+  color: var(--ul-gray);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Category & Topic Cards */
+.sub-category-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  color: var(--ul-black);
+  height: 100%;
+}
+.sub-category-card:hover {
+  background: var(--ul-primary);
+  color: var(--white) !important;
+  border-color: var(--ul-primary);
+  transform: translateX(4px);
+}
+.sub-category-card:hover .cat-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+.sub-category-card .cat-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sub-category-card .cat-icon {
+  font-size: 20px;
+}
+.sub-category-card .cat-name {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 16px;
+}
+.sub-category-card .cat-count {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: var(--ul-gray);
+  transition: all 0.25s ease;
+}
+
+/* Author / Journalist Cards */
+.sub-author-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.sub-author-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  border-color: rgba(235, 83, 16, 0.3);
+}
+.sub-author-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(235, 83, 16, 0.2);
+}
+.sub-author-name {
+  font-family: var(--font-quicksand);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 2px;
+}
+.sub-author-beat {
+  font-size: 12.5px;
+  color: var(--ul-primary);
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+.sub-author-bio {
+  font-size: 13px;
+  color: var(--ul-gray);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Editorial Spotlight Card */
+.sub-spotlight-card {
+  background: #fdfaf7;
+  border: 1px solid rgba(235, 83, 16, 0.15);
+  border-radius: 20px;
+  padding: clamp(24px, 3.5vw, 44px);
+  position: relative;
+  overflow: hidden;
+}
+.sub-spotlight-card .spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--ul-primary);
+  background: rgba(235, 83, 16, 0.12);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.sub-spotlight-title {
+  font-family: var(--font-quicksand);
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 700;
+  color: var(--ul-black);
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.sub-spotlight-desc {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Rapid Response Hotline & Support Banner */
+.sub-hotline-banner {
+  background: linear-gradient(135deg, #1e252f 0%, #293444 100%);
+  border-radius: 20px;
+  padding: clamp(32px, 4vw, 54px);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.sub-hotline-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--ul-primary);
+}
+.sub-hotline-number {
+  font-family: var(--font-quicksand);
+  font-size: clamp(26px, 2.6vw, 38px);
+  font-weight: 800;
+  color: var(--ul-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.sub-hotline-number:hover {
+  color: #ff6f2d;
+}
+
+/* Trust Badges Bar */
+.sub-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  padding: 18px 24px;
+  margin-top: 30px;
+}
+.sub-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+}
+.sub-trust-item i {
+  color: var(--ul-primary);
+  font-size: 18px;
+}

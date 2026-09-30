@@ -33,8 +33,8 @@
 
 
     <!-- custom CSS -->
-
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sub-pages.css">
 
 </head>
 
@@ -696,6 +696,262 @@
 
         <!-- DONTATIONS SECTION END -->
 
+
+
+        <!-- SECTION 2: TRANSPARENCY & FUND BREAKDOWN START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">100% Accountable Giving</span>
+                    <h2 class="ul-section-title">Where Does Your Contribution Go?</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">We believe in absolute financial transparency. Every dollar given is tracked with itemized public accounting and third-party oversight.</p>
+                </div>
+
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4">
+                    <div class="col">
+                        <div class="sub-transparency-card">
+                            <span class="pct-badge">85%</span>
+                            <h3 class="card-title">Direct Community Relief</h3>
+                            <p class="card-desc">The overwhelming majority goes directly to purchasing food rations, lifesaving medicines, and clean water hardware.</p>
+                            <ul class="card-list">
+                                <li><i class="flaticon-check"></i> Fresh produce & staple grains</li>
+                                <li><i class="flaticon-check"></i> Pediatric medicine & surgical aid</li>
+                                <li><i class="flaticon-check"></i> School textbooks & uniforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-transparency-card">
+                            <span class="pct-badge">10%</span>
+                            <h3 class="card-title">Field Logistics & Vans</h3>
+                            <p class="card-desc">Ensures emergency supplies reach remote villages through our volunteer dispatch vans and temperature-safe coolers.</p>
+                            <ul class="card-list">
+                                <li><i class="flaticon-check"></i> Emergency dispatch fleet</li>
+                                <li><i class="flaticon-check"></i> Cold-chain vaccine transport</li>
+                                <li><i class="flaticon-check"></i> Field coordinator safety gear</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-transparency-card">
+                            <span class="pct-badge">5%</span>
+                            <h3 class="card-title">Audits & Tech Security</h3>
+                            <p class="card-desc">Maintains high-security payment processing, annual statutory compliance, and digital donor reporting.</p>
+                            <ul class="card-list">
+                                <li><i class="flaticon-check"></i> Independent financial auditing</li>
+                                <li><i class="flaticon-check"></i> 256-bit encrypted transactions</li>
+                                <li><i class="flaticon-check"></i> Automated instant tax receipts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Bar -->
+                <div class="sub-trust-bar">
+                    <div class="sub-trust-item"><i class="flaticon-checked"></i> 80G & 501(c)(3) Tax Deductible</div>
+                    <div class="sub-trust-item"><i class="flaticon-checked"></i> Audited By Global CPA Standards</div>
+                    <div class="sub-trust-item"><i class="flaticon-checked"></i> 256-Bit Bank Grade SSL</div>
+                    <div class="sub-trust-item"><i class="flaticon-checked"></i> Instant Email Receipt & Certificate</div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 2: TRANSPARENCY END -->
+
+
+
+        <!-- SECTION 3: QUICK DONATE SPOTLIGHT START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="sub-quick-donate-box">
+                    <div class="row align-items-center gy-4">
+                        <div class="col-lg-6">
+                            <span class="badge" style="background: rgba(235, 83, 16, 0.2); color: #ff6f2d; padding: 6px 14px; border-radius: 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Urgent Appeal</span>
+                            <h2 style="font-family: var(--font-quicksand); font-size: clamp(24px, 2.5vw, 36px); font-weight: 700; color: #ffffff; margin-top: 12px; margin-bottom: 14px;">Urgent Nutrition & Medical Aid for 1,200 Displaced Children</h2>
+                            <p style="color: #cbd5e1; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Flooding has cut off vital supply lines to several regional camps. Your immediate contribution dispatches emergency dry rations, clean drinking water, and pediatric medical supplies today.</p>
+                            
+                            <div class="d-flex align-items-center gap-4 text-white">
+                                <div>
+                                    <div style="font-size: 26px; font-weight: 700; color: var(--ul-primary); font-family: var(--font-quicksand);">$42,800</div>
+                                    <div style="font-size: 13px; color: #94a3b8;">Raised of $50,000 Goal</div>
+                                </div>
+                                <div style="height: 40px; width: 1px; background: rgba(255,255,255,0.15);"></div>
+                                <div>
+                                    <div style="font-size: 26px; font-weight: 700; color: #ffffff; font-family: var(--font-quicksand);">3 Days</div>
+                                    <div style="font-size: 13px; color: #94a3b8;">Left in Campaign</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px;">
+                                <label style="font-size: 14px; font-weight: 700; color: #e2e8f0; display: block; margin-bottom: 10px;">Select Donation Tier:</label>
+                                <div class="sub-amount-btn-group">
+                                    <button type="button" class="sub-amount-btn" onclick="selectDonationAmount(this, '25')">$25</button>
+                                    <button type="button" class="sub-amount-btn active" onclick="selectDonationAmount(this, '50')">$50</button>
+                                    <button type="button" class="sub-amount-btn" onclick="selectDonationAmount(this, '100')">$100</button>
+                                    <button type="button" class="sub-amount-btn" onclick="selectDonationAmount(this, '250')">$250</button>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label style="font-size: 13px; color: #94a3b8; display: block; margin-bottom: 6px;">Or Enter Custom Amount ($ USD):</label>
+                                    <input type="number" id="customDonationInput" value="50" min="5" placeholder="Enter amount" style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #ffffff; font-size: 16px; font-weight: 600;">
+                                </div>
+
+                                <div id="donationImpactText" style="font-size: 13.5px; color: #f97316; margin-bottom: 18px; font-weight: 600;">
+                                    <i class="flaticon-check"></i> $50 provides a complete winter emergency relief kit & medicines for 1 child.
+                                </div>
+
+                                <button type="button" class="ul-btn w-100 justify-content-center" style="padding: 14px 20px; font-size: 16px; font-weight: 700;" onclick="alert('Thank you for pledging $' + document.getElementById('customDonationInput').value + '! Redirecting to secure checkout...');">
+                                    <i class="flaticon-love"></i> Complete Donation Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 3: QUICK DONATE END -->
+
+
+
+        <!-- SECTION 4: DONOR & BENEFICIARY STORIES START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Real Lives, Real Impact</span>
+                    <h2 class="ul-section-title">Stories From Those Whose Lives You Touched</h2>
+                </div>
+
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4">
+                    <div class="col">
+                        <div class="sub-story-card">
+                            <div class="sub-story-stars">
+                                <i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i>
+                            </div>
+                            <p class="sub-story-quote">"When the flash floods hit our village, Stackly Charitics was on the ground within 24 hours. The clean water tablets and hot meals kept my three young children safe from disease."</p>
+                            <div class="sub-story-author">
+                                <img src="images/reviewer-1.webp" alt="Beneficiary" class="sub-story-avatar">
+                                <div>
+                                    <h4 class="sub-story-name">Aminata Diallo</h4>
+                                    <span class="sub-story-role">Flood Relief Beneficiary, Mali</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-story-card">
+                            <div class="sub-story-stars">
+                                <i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i>
+                            </div>
+                            <p class="sub-story-quote">"I have supported Charitics for three years through monthly contributions. The itemized impact reports sent to my inbox after every campaign give me absolute confidence."</p>
+                            <div class="sub-story-author">
+                                <img src="images/reviewer-2.webp" alt="Monthly Donor" class="sub-story-avatar">
+                                <div>
+                                    <h4 class="sub-story-name">David Richardson</h4>
+                                    <span class="sub-story-role">Monthly Guardian Donor, USA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-story-card">
+                            <div class="sub-story-stars">
+                                <i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i>
+                            </div>
+                            <p class="sub-story-quote">"Thanks to the educational scholarship fund, I completed my nursing diploma. Today, I am proud to give back by serving at our community's free medical camp."</p>
+                            <div class="sub-story-author">
+                                <img src="images/reviewer-3.webp" alt="Scholarship Student" class="sub-story-avatar">
+                                <div>
+                                    <h4 class="sub-story-name">Maria Santos</h4>
+                                    <span class="sub-story-role">Scholarship Graduate & Volunteer Nurse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 4: STORIES END -->
+
+
+
+        <!-- SECTION 5: DONATION FAQS START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Got Questions?</span>
+                    <h2 class="ul-section-title">Frequently Asked Donation Questions</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="ul-accordion">
+                            <div class="ul-single-accordion-item open">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">How do I receive my tax deduction certificate?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>Immediately upon transaction completion, a digital 80G / 501(c)(3) tax receipt and certificate is sent to your registered email address. You can also download all historical receipts from your personal donor dashboard anytime.</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-single-accordion-item">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">Can I donate anonymously without displaying my name?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>Yes. When initiating your payment, simply tick the "Make this donation anonymous" checkbox. Your name will be hidden from the public campaign donor roll while your official receipt remains private and securely emailed to you.</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-single-accordion-item">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">How can I set up or modify a recurring monthly gift?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>Select "Make this a monthly donation" on any cause card. You can pause, adjust the amount, or cancel your recurring contribution with a single click from your donor dashboard at any time without fees.</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-single-accordion-item">
+                                <div class="ul-single-accordion-item__header">
+                                    <h3 class="ul-single-accordion-item__title">What payment methods are supported?</h3>
+                                    <span class="icon"><i class="flaticon-next"></i></span>
+                                </div>
+                                <div class="ul-single-accordion-item__body">
+                                    <p>We support all major Visa, Mastercard, American Express cards, PayPal, Apple Pay, Google Pay, UPI, and direct bank wire transfers for institutional or large philanthropists.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 5: FAQS END -->
+
+        <script>
+            function selectDonationAmount(btn, val) {
+                document.querySelectorAll('.sub-amount-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                var input = document.getElementById('customDonationInput');
+                if (input) input.value = val;
+                var impact = document.getElementById('donationImpactText');
+                if (impact) {
+                    if (val == '25') impact.innerHTML = '<i class="flaticon-check"></i> $25 supplies nutritious daily meals for a child for 1 whole month.';
+                    else if (val == '50') impact.innerHTML = '<i class="flaticon-check"></i> $50 provides a complete winter emergency relief kit & medicines for 1 child.';
+                    else if (val == '100') impact.innerHTML = '<i class="flaticon-check"></i> $100 covers full school tuition, books, and uniforms for 2 children.';
+                    else if (val == '250') impact.innerHTML = '<i class="flaticon-check"></i> $250 installs a household biosand clean water filter benefiting 10+ people.';
+                }
+            }
+        </script>
+
     </main>
 
 
@@ -734,7 +990,7 @@
 
                             <span class="ul-footer-top-contact-info-label">Address</span>
 
-                            <h5 class="ul-footer-top-contact-info-address">4648 Rocky Road Philadelphia PA, 1920</h5>
+                            <h5 class="ul-footer-top-contact-info-address">Salem, Chinna Thirupathi, Tamil Nadu</h5>
 
                         </div>
 
