@@ -3495,6 +3495,16 @@ button {
   background-color: var(--ul-primary);
   border-color: var(--ul-primary);
 }
+.ul-footer-socials a svg {
+  width: clamp(12px, 0.79vw, 14px);
+  height: clamp(12px, 0.79vw, 14px);
+  fill: currentColor;
+  display: block;
+  transition: all 0.3s ease;
+}
+.ul-footer-socials a:hover svg {
+  fill: var(--white);
+}
 .ul-footer-widget {
   min-width: clamp(110px, 10.51vw, 200px);
 }
@@ -5531,5 +5541,17 @@ body.sidebar-open {
     border-color: var(--ul-primary) !important;
     color: #ffffff !important;
     transform: translateY(-2px) !important;
+  }
+
+  .ul-sidebar-footer-social a svg {
+    width: 14px !important;
+    height: 14px !important;
+    fill: currentColor !important;
+    display: block !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .ul-sidebar-footer-social a:hover svg {
+    fill: #ffffff !important;
   }
 }
