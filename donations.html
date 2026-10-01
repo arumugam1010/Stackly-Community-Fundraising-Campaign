@@ -936,6 +936,306 @@
         </section>
         <!-- SECTION 5: FAQS END -->
 
+        <!-- SECTION 6: MONTHLY GIVING GUARDIAN CIRCLE START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Sustained Monthly Giving</span>
+                    <h2 class="ul-section-title">Join The Stackly Guardian Circle</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">Monthly donors are our quiet heroes. Consistent funding enables our emergency dispatch teams and rural clinics to operate year-round without fear of running out of supplies.</p>
+                </div>
+
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4">
+                    <div class="col">
+                        <div class="sub-guardian-tier">
+                            <div class="sub-guardian-price">$15 <span>/ Month</span></div>
+                            <h3 class="sub-guardian-title">Nourishment Guardian</h3>
+                            <p class="sub-guardian-desc">Provides 30 hot, protein-rich lunches and mineral drinking water for an orphaned or displaced child every single month.</p>
+                            <ul class="sub-pkg-list">
+                                <li><i class="flaticon-check"></i> 30 Nutritious school lunches / mo</li>
+                                <li><i class="flaticon-check"></i> Quarterly video dispatch from field</li>
+                                <li><i class="flaticon-check"></i> Annual consolidated 80G tax packet</li>
+                            </ul>
+                            <button type="button" class="ul-btn justify-content-center" style="font-size: 14px; padding: 12px;" onclick="alert('Thank you for pledging $15/month as a Nourishment Guardian! Redirecting to secure subscription...');">
+                                <i class="flaticon-love"></i> Join for $15 / Month
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-guardian-tier" style="border-color: var(--ul-primary); box-shadow: 0 16px 36px rgba(235, 83, 16, 0.1);">
+                            <span class="sub-pkg-badge">Most Popular</span>
+                            <div class="sub-guardian-price">$35 <span>/ Month</span></div>
+                            <h3 class="sub-guardian-title">Family Health Guardian</h3>
+                            <p class="sub-guardian-desc">Covers pediatric antibiotic treatments, clean water tablets, and emergency clinical triage for 3 vulnerable rural families monthly.</p>
+                            <ul class="sub-pkg-list">
+                                <li><i class="flaticon-check"></i> Essential medicines for 3 families</li>
+                                <li><i class="flaticon-check"></i> Monthly frontline physician briefing</li>
+                                <li><i class="flaticon-check"></i> Digital Guardian Community badge</li>
+                            </ul>
+                            <button type="button" class="ul-btn justify-content-center" style="font-size: 14px; padding: 12px;" onclick="alert('Thank you for pledging $35/month as a Family Health Guardian! Redirecting to secure subscription...');">
+                                <i class="flaticon-love"></i> Join for $35 / Month
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-guardian-tier">
+                            <div class="sub-guardian-price">$85 <span>/ Month</span></div>
+                            <h3 class="sub-guardian-title">Education & Well Guardian</h3>
+                            <p class="sub-guardian-desc">Maintains solar water well infrastructure and funds full digital classroom scholarships for 2 rural students.</p>
+                            <ul class="sub-pkg-list">
+                                <li><i class="flaticon-check"></i> Borewell pump solar upkeep</li>
+                                <li><i class="flaticon-check"></i> 2 Full annual student scholarships</li>
+                                <li><i class="flaticon-check"></i> Name on annual village well honor roll</li>
+                            </ul>
+                            <button type="button" class="ul-btn justify-content-center" style="font-size: 14px; padding: 12px;" onclick="alert('Thank you for pledging $85/month as an Education & Well Guardian! Redirecting to secure subscription...');">
+                                <i class="flaticon-love"></i> Join for $85 / Month
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 6: MONTHLY GIVING END -->
+
+        <!-- SECTION 7: EMPLOYER MATCHING GIFTS SEARCH TOOL START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="sub-matching-box">
+                    <div class="row align-items-center gy-4">
+                        <div class="col-lg-6">
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; padding: 6px 14px; border-radius: 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Double Your Generosity</span>
+                            <h2 style="font-family: var(--font-quicksand); font-size: clamp(24px, 2.5vw, 36px); font-weight: 700; color: var(--ul-black); margin-top: 12px; margin-bottom: 12px;">Does Your Company Match Your Donation?</h2>
+                            <p style="color: var(--ul-gray); font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Over 65% of Fortune 500 and top Indian enterprises match employee philanthropic donations 1:1 or 2:1. Search your employer below to see if your gift can do twice as much good at zero cost to you!</p>
+                            
+                            <div class="mb-3">
+                                <label style="font-size: 13.5px; font-weight: 700; color: var(--ul-black); display: block; margin-bottom: 6px;">Search Employer or Company Name:</label>
+                                <div class="d-flex gap-2">
+                                    <input type="text" id="companySearchInput" placeholder="e.g. Google, Microsoft, Tata, Infosys..." style="flex-grow: 1; padding: 12px 16px; border-radius: 12px; border: 1px solid #cbd5e1; font-size: 15px;" oninput="searchCompanyMatch(this.value)">
+                                    <button type="button" class="ul-btn" style="padding: 12px 20px;" onclick="searchCompanyMatch(document.getElementById('companySearchInput').value)"><i class="flaticon-search"></i> Check</button>
+                                </div>
+                            </div>
+
+                            <div style="font-size: 13px; color: #64748b; margin-top: 10px;">
+                                Popular matching partners: 
+                                <span class="sub-search-pill" onclick="setCompanySearch('Google')">Google (1:1)</span>
+                                <span class="sub-search-pill" onclick="setCompanySearch('Microsoft')">Microsoft (1:1)</span>
+                                <span class="sub-search-pill" onclick="setCompanySearch('Tata')">Tata Group (2:1)</span>
+                                <span class="sub-search-pill" onclick="setCompanySearch('Infosys')">Infosys (1:1)</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div id="companyMatchResult" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 16px; padding: 26px; box-shadow: 0 10px 24px rgba(0,0,0,0.03);">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.1); color: #059669; display: flex; align-items: center; justify-content: center; font-size: 22px;">
+                                        <i class="flaticon-checked"></i>
+                                    </div>
+                                    <div>
+                                        <h4 id="matchResultTitle" style="font-family: var(--font-quicksand); font-size: 18px; font-weight: 700; color: var(--ul-black); margin-bottom: 2px;">Matching Program Found</h4>
+                                        <span id="matchResultRatio" style="font-size: 13px; color: #059669; font-weight: 700;">100% (1:1) Match Verified</span>
+                                    </div>
+                                </div>
+                                <p id="matchResultDesc" style="font-size: 14px; color: var(--ul-gray); line-height: 1.6; margin-bottom: 16px;">Most employees qualify for up to $5,000 per calendar year in matched grants. Simply request your company's matching donation receipt after donating!</p>
+                                <div style="background: #f8fafc; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #334155;">
+                                    <strong>How to submit:</strong> Request an 80G tax receipt from Stackly -> Upload to your corporate HR portal -> Match is wired automatically.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 7: MATCHING GIFTS END -->
+
+        <!-- SECTION 8: TRIBUTE & MEMORIAL GIVING PORTAL START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Meaningful Tributes</span>
+                    <h2 class="ul-section-title">Dedicate A Donation In Honor or Memory of a Loved One</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">Celebrate a birthday, milestone, anniversary, or commemorate the sacred memory of someone dear by providing relief in their name.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="sub-pillar-box" style="padding: clamp(24px, 4vw, 36px);">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="d-flex gap-3 mb-4">
+                                        <label class="d-flex align-items-center gap-2" style="font-weight: 700; color: var(--ul-black); cursor: pointer;">
+                                            <input type="radio" name="tributeType" value="honor" checked onchange="updateTributePreview()"> In Honor Of (Celebration)
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2" style="font-weight: 700; color: var(--ul-black); cursor: pointer;">
+                                            <input type="radio" name="tributeType" value="memory" onchange="updateTributePreview()"> In Memory Of (Memorial)
+                                        </label>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label style="font-size: 13.5px; font-weight: 700; color: var(--ul-black); display: block; margin-bottom: 6px;">Honoree's Full Name:</label>
+                                        <input type="text" id="tributeNameInput" value="Sarah Jenkins" placeholder="Enter honoree's name" style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid #cbd5e1; font-size: 14.5px;" oninput="updateTributePreview()">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label style="font-size: 13.5px; font-weight: 700; color: var(--ul-black); display: block; margin-bottom: 6px;">Recipient Email (Optional to notify family):</label>
+                                        <input type="email" id="tributeEmailInput" placeholder="recipient@example.com" style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid #cbd5e1; font-size: 14.5px;">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label style="font-size: 13.5px; font-weight: 700; color: var(--ul-black); display: block; margin-bottom: 6px;">Personal Tribute Message:</label>
+                                        <textarea id="tributeMessageInput" rows="2" placeholder="Write a warm note of hope or remembrance..." style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid #cbd5e1; font-size: 14px;" oninput="updateTributePreview()"></textarea>
+                                    </div>
+
+                                    <button type="button" class="ul-btn w-100 justify-content-center" style="padding: 12px; font-weight: 700;" onclick="alert('Tribute dedication attached! Proceeding to pledge your tribute donation...');">
+                                        <i class="flaticon-love"></i> Complete Tribute Donation
+                                    </button>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div style="background: #fff8f5; border: 2px dashed #fbd5c3; border-radius: 16px; padding: 28px; text-align: center;">
+                                        <span style="font-size: 11px; text-transform: uppercase; color: var(--ul-primary); font-weight: 800; letter-spacing: 1px;">Live Certificate Preview</span>
+                                        <div style="margin: 16px 0;">
+                                            <i class="flaticon-love" style="font-size: 36px; color: var(--ul-primary);"></i>
+                                        </div>
+                                        <h4 id="tributeCertTitle" style="font-family: var(--font-quicksand); font-size: 20px; font-weight: 800; color: var(--ul-black); margin-bottom: 8px;">A Gift of Compassion In Honor Of</h4>
+                                        <div id="tributeCertName" style="font-family: var(--font-quicksand); font-size: 24px; font-weight: 800; color: var(--ul-primary); margin-bottom: 12px;">Sarah Jenkins</div>
+                                        <p id="tributeCertNote" style="font-size: 13.5px; color: var(--ul-gray); font-style: italic; line-height: 1.5; margin-bottom: 16px;">"May this contribution bring healing, water, and warm meals to children in need, honoring a life of kindness."</p>
+                                        <div style="font-size: 12px; color: #94a3b8;">Issued by Stackly Community Fundraising Campaign • Tax 80G Compliant</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 8: TRIBUTE GIVING END -->
+
+        <!-- SECTION 9: NON-CASH & CRYPTO GIVING OPTIONS START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Smart Philanthropy</span>
+                    <h2 class="ul-section-title">More Ways to Give: Stocks, Crypto & Bequests</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">Maximize your tax deduction and capital gains efficiency while transforming frontline communities.</p>
+                </div>
+
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-4">
+                    <div class="col">
+                        <div class="sub-fleet-box">
+                            <span class="sub-fleet-status"><i class="flaticon-checked"></i> Tax Efficient</span>
+                            <h3 class="sub-fleet-title">Stocks & Mutual Funds</h3>
+                            <p class="sub-fleet-desc">Donate appreciated equities to eliminate 100% of capital gains taxes while receiving full fair market value tax write-offs.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-fleet-box">
+                            <span class="sub-fleet-status"><i class="flaticon-checked"></i> Instant Transfer</span>
+                            <h3 class="sub-fleet-title">Cryptocurrency Gifts</h3>
+                            <p class="sub-fleet-desc">Support our disaster fleet with Bitcoin, Ethereum, and USDC. Secure non-profit wallets with automated tax receipting.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-fleet-box">
+                            <span class="sub-fleet-status"><i class="flaticon-checked"></i> Age 70½+</span>
+                            <h3 class="sub-fleet-title">IRA Charitable Rollover</h3>
+                            <p class="sub-fleet-desc">Transfer up to $105,000 annually directly from your traditional IRA tax-free to satisfy your required minimum distribution.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-fleet-box">
+                            <span class="sub-fleet-status"><i class="flaticon-checked"></i> Enduring Legacy</span>
+                            <h3 class="sub-fleet-title">Legacy Bequests & Trusts</h3>
+                            <p class="sub-fleet-desc">Include Stackly in your will or living trust to endow clean water borewells and educational fellowships for generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 9: NON-CASH END -->
+
+        <!-- SECTION 10: RECENT DONOR HALL OF FAME START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Community Gratitude</span>
+                    <h2 class="ul-section-title">Recent Champions of Compassion</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">Every contribution directly saves a life. Here are a few of the latest generous souls who pledged support today.</p>
+                </div>
+
+                <div class="row row-cols-lg-2 row-cols-1 g-3">
+                    <div class="col">
+                        <div class="sub-donor-item">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images/reviewer-1.webp" alt="Priya M." style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h4 style="font-family: var(--font-quicksand); font-size: 16px; font-weight: 700; color: var(--ul-black); margin-bottom: 2px;">Priya M.</h4>
+                                    <div style="font-size: 13px; color: var(--ul-gray);">Chennai, India • "For the Flood Relief Clean Water Fund"</div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="sub-donor-amount">$250</div>
+                                <div style="font-size: 12px; color: #10b981; font-weight: 600;">12 mins ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-donor-item">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images/reviewer-2.webp" alt="David & Karen" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h4 style="font-family: var(--font-quicksand); font-size: 16px; font-weight: 700; color: var(--ul-black); margin-bottom: 2px;">David &amp; Karen W.</h4>
+                                    <div style="font-size: 13px; color: var(--ul-gray);">London, UK • "Monthly Health Guardian donation"</div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="sub-donor-amount">$70</div>
+                                <div style="font-size: 12px; color: #10b981; font-weight: 600;">28 mins ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-donor-item">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images/reviewer-3.webp" alt="Apex Tech" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h4 style="font-family: var(--font-quicksand); font-size: 16px; font-weight: 700; color: var(--ul-black); margin-bottom: 2px;">Apex Technologies CSR</h4>
+                                    <div style="font-size: 13px; color: var(--ul-gray);">Salem, India • "Corporate Matching for Rural STEM Labs"</div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="sub-donor-amount">$1,500</div>
+                                <div style="font-size: 12px; color: #10b981; font-weight: 600;">1 hour ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-donor-item">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images/reviewer-4.webp" alt="Sister Mary" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h4 style="font-family: var(--font-quicksand); font-size: 16px; font-weight: 700; color: var(--ul-black); margin-bottom: 2px;">Sister Mary &amp; Parish</h4>
+                                    <div style="font-size: 13px; color: var(--ul-gray);">Sydney, Australia • "Emergency Pediatric Antibiotic Kits"</div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="sub-donor-amount">$100</div>
+                                <div style="font-size: 12px; color: #10b981; font-weight: 600;">2 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 10: DONOR FEED END -->
+
         <script>
             function selectDonationAmount(btn, val) {
                 document.querySelectorAll('.sub-amount-btn').forEach(b => b.classList.remove('active'));
@@ -949,6 +1249,52 @@
                     else if (val == '100') impact.innerHTML = '<i class="flaticon-check"></i> $100 covers full school tuition, books, and uniforms for 2 children.';
                     else if (val == '250') impact.innerHTML = '<i class="flaticon-check"></i> $250 installs a household biosand clean water filter benefiting 10+ people.';
                 }
+            }
+
+            function setCompanySearch(name) {
+                var input = document.getElementById('companySearchInput');
+                if (input) input.value = name;
+                searchCompanyMatch(name);
+            }
+
+            function searchCompanyMatch(val) {
+                var q = (val || '').toLowerCase().trim();
+                var title = document.getElementById('matchResultTitle');
+                var ratio = document.getElementById('matchResultRatio');
+                var desc = document.getElementById('matchResultDesc');
+
+                if (q.indexOf('tata') !== -1) {
+                    if (title) title.innerText = 'Tata Group CSR Matching';
+                    if (ratio) ratio.innerText = '200% (2:1) Match Verified';
+                    if (desc) desc.innerText = 'Tata Group matches eligible employee gifts up to ₹1,00,000 per year with double matching for rural STEM and water initiatives.';
+                } else if (q.indexOf('google') !== -1) {
+                    if (title) title.innerText = 'Google Philanthropy Match';
+                    if (ratio) ratio.innerText = '100% (1:1) Match Verified';
+                    if (desc) desc.innerText = 'Google matches full-time and part-time employee donations up to $10,000 annually across verified registered NGOs.';
+                } else if (q.indexOf('microsoft') !== -1) {
+                    if (title) title.innerText = 'Microsoft Giving Program';
+                    if (ratio) ratio.innerText = '100% (1:1) Match Verified';
+                    if (desc) desc.innerText = 'Microsoft matches up to $15,000 per employee per year, plus $25 per volunteer hour logged with Stackly.';
+                } else {
+                    if (title) title.innerText = (val || 'Your Employer') + ' Matching Check';
+                    if (ratio) ratio.innerText = 'Eligible for 1:1 Corporate Match';
+                    if (desc) desc.innerText = 'Submit your official Stackly 80G tax receipt to your employer HR/Giving portal to automatically double your donation.';
+                }
+            }
+
+            function updateTributePreview() {
+                var typeRadio = document.querySelector('input[name="tributeType"]:checked');
+                var type = typeRadio ? typeRadio.value : 'honor';
+                var name = document.getElementById('tributeNameInput') ? document.getElementById('tributeNameInput').value : 'Sarah Jenkins';
+                var msg = document.getElementById('tributeMessageInput') ? document.getElementById('tributeMessageInput').value : '';
+                
+                var title = document.getElementById('tributeCertTitle');
+                var nameEl = document.getElementById('tributeCertName');
+                var noteEl = document.getElementById('tributeCertNote');
+
+                if (title) title.innerText = type === 'memory' ? 'A Gift of Compassion In Memory Of' : 'A Gift of Compassion In Honor Of';
+                if (nameEl) nameEl.innerText = name || 'Someone Special';
+                if (noteEl && msg) noteEl.innerText = '"' + msg + '"';
             }
         </script>
 

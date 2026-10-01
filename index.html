@@ -14,6 +14,7 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sub-pages.css">
 </head>
 
 <body>
@@ -1212,6 +1213,320 @@
             </div>
         </div>
         <!-- GALLERY SECTION END -->
+
+        <!-- SECTION 1: INTERACTIVE IMPACT CALCULATOR START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="sub-impact-calc-card">
+                    <div class="row align-items-center gy-4">
+                        <div class="col-lg-6">
+                            <span class="badge" style="background: rgba(235, 83, 16, 0.2); color: #ff6f2d; padding: 6px 14px; border-radius: 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Transparent Giving</span>
+                            <h2 style="font-family: var(--font-quicksand); font-size: clamp(26px, 2.7vw, 38px); font-weight: 700; color: #ffffff; margin-top: 12px; margin-bottom: 12px;">Calculate Your Real-World Impact</h2>
+                            <p style="color: #cbd5e1; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Wondering what your gift actually accomplishes? Select a contribution tier below or enter a custom amount to see the tangible medical, nutritional, and educational relief your generosity delivers.</p>
+                            
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <button type="button" class="sub-calc-tier-btn" onclick="updateIndexCalc(this, 25)">$25</button>
+                                <button type="button" class="sub-calc-tier-btn active" onclick="updateIndexCalc(this, 50)">$50</button>
+                                <button type="button" class="sub-calc-tier-btn" onclick="updateIndexCalc(this, 100)">$100</button>
+                                <button type="button" class="sub-calc-tier-btn" onclick="updateIndexCalc(this, 250)">$250</button>
+                                <button type="button" class="sub-calc-tier-btn" onclick="updateIndexCalc(this, 500)">$500</button>
+                            </div>
+
+                            <div style="max-width: 320px;">
+                                <label style="font-size: 13px; color: #94a3b8; display: block; margin-bottom: 6px;">Or Enter Custom Amount ($ USD):</label>
+                                <div class="d-flex gap-2">
+                                    <input type="number" id="indexCalcCustomInput" value="50" min="5" placeholder="Amount" style="width: 140px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #ffffff; font-weight: 700;" oninput="customIndexCalc(this.value)">
+                                    <a href="donations.html" class="ul-btn" style="padding: 10px 20px; font-size: 14px;"><i class="flaticon-love"></i> Donate</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="sub-calc-impact-display">
+                                <div style="font-size: 13px; text-transform: uppercase; color: #94a3b8; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 8px;">Direct Field Outcome</div>
+                                <div id="indexCalcAmountTitle" style="font-family: var(--font-quicksand); font-size: 28px; font-weight: 800; color: var(--ul-primary); margin-bottom: 12px;">$50 Donation Outcome:</div>
+                                <p id="indexCalcDescription" style="color: #f1f5f9; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Funds a comprehensive pediatric health screening, prescription antibiotics, and a 30-day supply of iron-fortified porridge for 1 child.</p>
+                                
+                                <div class="row row-cols-3 text-center g-2 pt-3" style="border-top: 1px solid rgba(255,255,255,0.12);">
+                                    <div>
+                                        <div id="indexCalcStat1" style="font-size: 22px; font-weight: 700; color: #ffffff; font-family: var(--font-quicksand);">1 Child</div>
+                                        <div style="font-size: 12px; color: #94a3b8;">Full Treatment</div>
+                                    </div>
+                                    <div>
+                                        <div id="indexCalcStat2" style="font-size: 22px; font-weight: 700; color: #ffffff; font-family: var(--font-quicksand);">30 Days</div>
+                                        <div style="font-size: 12px; color: #94a3b8;">Nutritional Support</div>
+                                    </div>
+                                    <div>
+                                        <div id="indexCalcStat3" style="font-size: 22px; font-weight: 700; color: #ffffff; font-family: var(--font-quicksand);">100%</div>
+                                        <div style="font-size: 12px; color: #94a3b8;">Tax Deductible</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 1: IMPACT CALCULATOR END -->
+
+        <!-- SECTION 2: 2026 COMMUNITY MILESTONES & REAL-TIME COUNTERS START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Live Verified Metrics</span>
+                    <h2 class="ul-section-title">The Measurable Footprint of Our Collective Work</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">Every milestone below is independently audited and backed by real-time GPS field records across our southern humanitarian chapters.</p>
+                </div>
+
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-4">
+                    <div class="col">
+                        <div class="sub-kpi-card">
+                            <div class="sub-kpi-icon"><i class="flaticon-love"></i></div>
+                            <div>
+                                <div class="sub-kpi-value">142,500+</div>
+                                <div class="sub-kpi-label">Lives Directly Impacted</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-kpi-card">
+                            <div class="sub-kpi-icon"><i class="flaticon-pin"></i></div>
+                            <div>
+                                <div class="sub-kpi-value">340+</div>
+                                <div class="sub-kpi-label">Remote Villages Reached</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-kpi-card">
+                            <div class="sub-kpi-icon"><i class="flaticon-checked"></i></div>
+                            <div>
+                                <div class="sub-kpi-value">98.4%</div>
+                                <div class="sub-kpi-label">Direct Field Delivery Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-kpi-card">
+                            <div class="sub-kpi-icon"><i class="flaticon-team"></i></div>
+                            <div>
+                                <div class="sub-kpi-value">2,400+</div>
+                                <div class="sub-kpi-label">Active Field Volunteers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 2: MILESTONES END -->
+
+        <!-- SECTION 3: 4-STEP GIVING JOURNEY START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Transparent Lifecycle</span>
+                    <h2 class="ul-section-title">How Your Gift Moves From Digital Pledge To Frontline Action</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">We believe donors deserve complete clarity on where their money goes and when it touches beneficiary hands.</p>
+                </div>
+
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-4">
+                    <div class="col">
+                        <div class="sub-process-card">
+                            <div class="step-badge">01</div>
+                            <h3 class="step-title">Verified Field Audit</h3>
+                            <p class="step-desc">Grassroots coordinators conduct in-person baseline surveys to verify genuine needs before launching any aid appeal.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-process-card">
+                            <div class="step-badge">02</div>
+                            <h3 class="step-title">Zero-Loss Donation</h3>
+                            <p class="step-desc">Contributions are processed via 256-bit encrypted gateways with automated instant 80G / 501(c)(3) tax receipts.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-process-card">
+                            <div class="step-badge">03</div>
+                            <h3 class="step-title">Rapid Fleet Deployment</h3>
+                            <p class="step-desc">Our temperature-controlled vans and trained volunteer squadrons deliver supplies within 48 to 72 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-process-card">
+                            <div class="step-badge">04</div>
+                            <h3 class="step-title">Photographic Reports</h3>
+                            <p class="step-desc">Donors receive a personalized photo and GPS delivery report documenting the exact impact of their donation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 3: 4-STEP GIVING JOURNEY END -->
+
+        <!-- SECTION 4: EMERGENCY URGENT NEED SPOTLIGHT START -->
+        <section class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="sub-urgent-spotlight">
+                    <div class="row align-items-center gy-4">
+                        <div class="col-lg-7">
+                            <span class="sub-urgent-badge">Urgent Disaster Flash Appeal</span>
+                            <h2 style="font-family: var(--font-quicksand); font-size: clamp(24px, 2.6vw, 36px); font-weight: 700; color: var(--ul-black); margin-bottom: 12px;">Flash Flood Clean Water & Pediatric Relief Campaign</h2>
+                            <p style="color: var(--ul-gray); font-size: 15.5px; line-height: 1.6; margin-bottom: 18px;">Recent seasonal floods have submerged groundwater wells across 8 river delta settlements in Cuddalore and Thanjavur districts. Over 1,400 displaced families urgently require water purification filters, dry rations, and pediatric oral rehydration packets.</p>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between font-weight-bold" style="font-size: 14.5px; margin-bottom: 8px;">
+                                    <span><strong>$48,600</strong> raised of $60,000 goal</span>
+                                    <span style="color: var(--ul-primary); font-weight: 700;">81% Completed</span>
+                                </div>
+                                <div style="height: 10px; background: #e2e8f0; border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 81%; height: 100%; background: linear-gradient(90deg, #eb5310, #f97316); border-radius: 10px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap align-items-center gap-3">
+                                <span style="font-size: 13px; background: #f1f5f9; padding: 6px 14px; border-radius: 20px; color: #475569; font-weight: 600;">
+                                    <i class="flaticon-clock"></i> 4 Days Remaining
+                                </span>
+                                <span style="font-size: 13px; background: #ecfdf5; padding: 6px 14px; border-radius: 20px; color: #059669; font-weight: 600;">
+                                    ⚡ Last gift: $150 by Anita R. 4 mins ago
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div style="background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px;">
+                                <h4 style="font-family: var(--font-quicksand); font-size: 18px; font-weight: 700; color: var(--ul-black); margin-bottom: 12px;">Quick Donate to Flood Relief:</h4>
+                                <div class="d-flex gap-2 mb-3">
+                                    <a href="donations.html" class="ul-btn flex-grow-1 justify-content-center" style="padding: 10px; font-size: 14px;">$25</a>
+                                    <a href="donations.html" class="ul-btn flex-grow-1 justify-content-center" style="padding: 10px; font-size: 14px;">$50</a>
+                                    <a href="donations.html" class="ul-btn flex-grow-1 justify-content-center" style="padding: 10px; font-size: 14px;">$100</a>
+                                </div>
+                                <a href="donations.html" class="ul-btn w-100 justify-content-center" style="padding: 12px; font-weight: 700;">
+                                    <i class="flaticon-love"></i> Make Emergency Donation
+                                </a>
+                                <div class="text-center mt-2" style="font-size: 12px; color: #94a3b8;">Instant 80G Tax Exemption Certificate Issued</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 4: EMERGENCY SPOTLIGHT END -->
+
+        <!-- SECTION 5: GLOBAL CORPORATE CSR PARTNERS START -->
+        <section class="ul-section-spacing" style="background-color: #fafbfc;">
+            <div class="ul-container">
+                <div class="text-center mb-5">
+                    <span class="ul-section-sub-title">Institutional Allies</span>
+                    <h2 class="ul-section-title">Empowered by Global CSR Leaders & Grantmaking Alliances</h2>
+                    <p style="max-width: 650px; margin: 12px auto 0; color: var(--ul-gray); font-size: 15px;">We collaborate with forward-thinking enterprises that match employee giving, sponsor mobile clinics, and fund sustainable rural borewells.</p>
+                </div>
+
+                <div class="row row-cols-lg-6 row-cols-md-3 row-cols-2 g-3">
+                    <div class="col">
+                        <div class="sub-partner-box">
+                            <h4 class="sub-partner-name">Apex Global</h4>
+                            <span class="sub-partner-match">2:1 Match</span>
+                            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Logistics Partner</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-partner-box">
+                            <h4 class="sub-partner-name">CareFirst Pharma</h4>
+                            <span class="sub-partner-match">1:1 Match</span>
+                            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Medical Kits</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-partner-box">
+                            <h4 class="sub-partner-name">SolarGrid Tech</h4>
+                            <span class="sub-partner-match">CSR Grant</span>
+                            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Clean Water Wells</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-partner-box">
+                            <h4 class="sub-partner-name">Horizon Bank</h4>
+                            <span class="sub-partner-match">1:1 Match</span>
+                            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Micro-Grants</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-partner-box">
+                            <h4 class="sub-partner-name">Tata Trust CSR</h4>
+                            <span class="sub-partner-match">2:1 Match</span>
+                            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Rural STEM Labs</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="sub-partner-box">
+                            <h4 class="sub-partner-name">United Nations SDG</h4>
+                            <span class="sub-partner-match">Partner</span>
+                            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Policy Alliance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 5: PARTNERS END -->
+
+        <script>
+            function updateIndexCalc(btn, amount) {
+                document.querySelectorAll('.sub-calc-tier-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                var input = document.getElementById('indexCalcCustomInput');
+                if (input) input.value = amount;
+                renderIndexCalc(amount);
+            }
+
+            function customIndexCalc(val) {
+                var amt = parseInt(val) || 25;
+                document.querySelectorAll('.sub-calc-tier-btn').forEach(b => b.classList.remove('active'));
+                renderIndexCalc(amt);
+            }
+
+            function renderIndexCalc(amount) {
+                var title = document.getElementById('indexCalcAmountTitle');
+                var desc = document.getElementById('indexCalcDescription');
+                var s1 = document.getElementById('indexCalcStat1');
+                var s2 = document.getElementById('indexCalcStat2');
+
+                if (title) title.innerText = '$' + amount + ' Donation Outcome:';
+                if (amount <= 25) {
+                    if (desc) desc.innerText = 'Provides a full month of wholesome daily warm meals and clean mineral drinking water for 1 orphaned or underprivileged child.';
+                    if (s1) s1.innerText = '1 Child';
+                    if (s2) s2.innerText = '30 Days';
+                } else if (amount <= 50) {
+                    if (desc) desc.innerText = 'Funds a comprehensive pediatric health screening, prescription antibiotics, and a 30-day supply of iron-fortified porridge for 1 child.';
+                    if (s1) s1.innerText = '1 Child';
+                    if (s2) s2.innerText = '30 Days';
+                } else if (amount <= 100) {
+                    if (desc) desc.innerText = 'Covers complete annual school supplies, mathematics textbooks, 2 pairs of uniforms, and tuition assistance for 2 village students.';
+                    if (s1) s1.innerText = '2 Students';
+                    if (s2) s2.innerText = '1 Full Year';
+                } else if (amount <= 250) {
+                    if (desc) desc.innerText = 'Installs a high-flow biosand community clean water filter station providing safe cholera-free drinking water for 40+ rural residents.';
+                    if (s1) s1.innerText = '40+ People';
+                    if (s2) s2.innerText = 'Continuous';
+                } else {
+                    if (desc) desc.innerText = 'Sponsors a complete mobile health clinic deployment with 2 physicians, diagnostic tools, and medicines serving an entire remote hamlet.';
+                    if (s1) s1.innerText = '120+ Patients';
+                    if (s2) s2.innerText = 'Full Clinic Day';
+                }
+            }
+        </script>
+
     </main>
 
 

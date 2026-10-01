@@ -535,3 +535,904 @@
   color: var(--ul-primary);
   font-size: 18px;
 }
+
+/* ========================================================
+   ENHANCED MODULAR COMPONENTS FOR ALL 7 PAGES
+   ======================================================== */
+
+/* Core Pillars & Value Cards */
+.sub-pillar-box {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 30px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sub-pillar-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--ul-primary);
+  transition: width 0.35s ease;
+}
+.sub-pillar-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(235, 83, 16, 0.08);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-pillar-box:hover::before {
+  width: 100%;
+}
+.sub-pillar-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(235, 83, 16, 0.1);
+  color: var(--ul-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.sub-pillar-title {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 12px;
+}
+.sub-pillar-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ul-gray);
+  margin-bottom: 0;
+}
+
+/* Milestone Timeline Cards */
+.sub-timeline-wrap {
+  position: relative;
+  padding: 20px 0;
+}
+.sub-timeline-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #e2e8f0;
+  transform: translateX(-50%);
+}
+@media (max-width: 991px) {
+  .sub-timeline-wrap::before {
+    left: 20px;
+  }
+}
+.sub-timeline-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 36px;
+}
+.sub-timeline-row:last-child {
+  margin-bottom: 0;
+}
+.sub-timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 4px solid var(--ul-primary);
+  box-shadow: 0 0 0 4px rgba(235, 83, 16, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--ul-primary);
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .sub-timeline-node {
+    left: 20px;
+  }
+}
+.sub-timeline-content {
+  width: calc(50% - 40px);
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+.sub-timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.3);
+}
+.sub-timeline-row.left .sub-timeline-content {
+  margin-right: auto;
+}
+.sub-timeline-row.right .sub-timeline-content {
+  margin-left: auto;
+}
+@media (max-width: 991px) {
+  .sub-timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+}
+.sub-timeline-year {
+  display: inline-block;
+  background: rgba(235, 83, 16, 0.12);
+  color: var(--ul-primary);
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.sub-timeline-title {
+  font-family: var(--font-quicksand);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 8px;
+}
+.sub-timeline-desc {
+  font-size: 14.5px;
+  color: var(--ul-gray);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Advisor & Governance Cards */
+.sub-advisor-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.sub-advisor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-advisor-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 3px solid rgba(235, 83, 16, 0.2);
+}
+.sub-advisor-name {
+  font-family: var(--font-quicksand);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 4px;
+}
+.sub-advisor-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ul-primary);
+  display: block;
+  margin-bottom: 12px;
+}
+.sub-advisor-bio {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* Accreditation & Trust Badges */
+.sub-accred-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.sub-accred-card:hover {
+  border-color: var(--ul-primary);
+  box-shadow: 0 10px 24px rgba(235, 83, 16, 0.07);
+  transform: translateY(-3px);
+}
+.sub-accred-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  background: rgba(235, 83, 16, 0.1);
+  color: var(--ul-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.sub-accred-name {
+  font-family: var(--font-quicksand);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 2px;
+}
+.sub-accred-meta {
+  font-size: 12.5px;
+  color: #10b981;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Annual Financial Report Hub */
+.sub-report-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.sub-report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.sub-report-badge {
+  background: rgba(235, 83, 16, 0.1);
+  color: var(--ul-primary);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+.sub-report-title {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 10px;
+}
+.sub-report-meta {
+  font-size: 13.5px;
+  color: var(--ul-gray);
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+.sub-report-meta span {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Interactive Impact Calculator */
+.sub-impact-calc-card {
+  background: linear-gradient(135deg, #1e252f 0%, #2b3648 100%);
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 44px);
+  color: var(--white);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.sub-calc-tier-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.sub-calc-tier-btn:hover,
+.sub-calc-tier-btn.active {
+  background: var(--ul-primary);
+  border-color: var(--ul-primary);
+  box-shadow: 0 6px 16px rgba(235, 83, 16, 0.4);
+}
+.sub-calc-impact-display {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+/* Emergency Urgent Need Spotlight */
+.sub-urgent-spotlight {
+  background: #ffffff;
+  border: 2px solid #ffedd5;
+  border-radius: 20px;
+  padding: clamp(24px, 3.5vw, 40px);
+  box-shadow: 0 12px 36px rgba(235, 83, 16, 0.09);
+  position: relative;
+  overflow: hidden;
+}
+.sub-urgent-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #eb5310, #f97316, #ef4444);
+}
+.sub-urgent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fee2e2;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.sub-urgent-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* Corporate CSR Partner Cards */
+.sub-partner-box {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sub-partner-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-partner-name {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 4px;
+}
+.sub-partner-match {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-top: 6px;
+}
+
+/* Service Assistance Request Cards */
+.sub-assistance-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.35s ease;
+}
+.sub-assistance-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ul-primary);
+  box-shadow: 0 16px 32px rgba(235, 83, 16, 0.08);
+}
+.sub-assistance-badge {
+  display: inline-block;
+  background: rgba(235, 83, 16, 0.1);
+  color: var(--ul-primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.sub-assistance-title {
+  font-family: var(--font-quicksand);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 10px;
+}
+.sub-assistance-desc {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+/* Fleet & Field Assets */
+.sub-fleet-box {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.sub-fleet-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-fleet-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+.sub-fleet-title {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 8px;
+}
+.sub-fleet-desc {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* Corporate CSR Package Tiers */
+.sub-pkg-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 32px 26px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease;
+  position: relative;
+}
+.sub-pkg-card.featured {
+  border-color: var(--ul-primary);
+  box-shadow: 0 16px 36px rgba(235, 83, 16, 0.12);
+}
+.sub-pkg-badge {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: var(--ul-primary);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.sub-pkg-name {
+  font-family: var(--font-quicksand);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 8px;
+}
+.sub-pkg-price {
+  font-family: var(--font-quicksand);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--ul-primary);
+  margin-bottom: 16px;
+}
+.sub-pkg-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+.sub-pkg-list li {
+  font-size: 14.5px;
+  color: #475569;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sub-pkg-list li i {
+  color: #10b981;
+}
+
+/* Monthly Giving Club (Guardians) */
+.sub-guardian-tier {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 30px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease;
+  position: relative;
+}
+.sub-guardian-tier:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(235, 83, 16, 0.1);
+  border-color: var(--ul-primary);
+}
+.sub-guardian-price {
+  font-family: var(--font-quicksand);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ul-primary);
+  margin-bottom: 10px;
+}
+.sub-guardian-price span {
+  font-size: 15px;
+  color: var(--ul-gray);
+  font-weight: 500;
+}
+.sub-guardian-title {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 10px;
+}
+.sub-guardian-desc {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* Matching Gift Search Box */
+.sub-matching-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 32px 28px;
+}
+.sub-search-pill {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 4px;
+}
+.sub-search-pill:hover {
+  border-color: var(--ul-primary);
+  color: var(--ul-primary);
+}
+
+/* Live Gratitude Donor Feed */
+.sub-donor-item {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+.sub-donor-item:hover {
+  border-color: rgba(235, 83, 16, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+.sub-donor-amount {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ul-primary);
+}
+
+/* Virtual & Hybrid Events */
+.sub-virtual-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 26px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.sub-virtual-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ul-primary);
+  box-shadow: 0 14px 30px rgba(235, 83, 16, 0.08);
+}
+.sub-virtual-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e0f2fe;
+  color: #0284c7;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.sub-virtual-title {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 10px;
+}
+.sub-virtual-meta {
+  font-size: 13.5px;
+  color: var(--ul-gray);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* Volunteer Squadron Roles */
+.sub-squad-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 26px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.sub-squad-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-squad-title {
+  font-family: var(--font-quicksand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 8px;
+}
+.sub-squad-desc {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* Downloadable Kits */
+.sub-kit-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+.sub-kit-card:hover {
+  border-color: var(--ul-primary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Trending Topic Pills */
+.sub-topic-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: #334155;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.sub-topic-pill:hover {
+  background: rgba(235, 83, 16, 0.12);
+  color: var(--ul-primary);
+}
+.sub-topic-pill span {
+  background: #ffffff;
+  color: var(--ul-primary);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+/* Interactive Poll Widget */
+.sub-poll-box {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+.sub-poll-option {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sub-poll-option:hover,
+.sub-poll-option.selected {
+  border-color: var(--ul-primary);
+  background: #fff7ed;
+}
+.sub-poll-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(235, 83, 16, 0.15);
+  transition: width 0.6s ease;
+  z-index: 1;
+}
+.sub-poll-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: #1e252f;
+}
+
+/* Regional Chapter Offices & Directory */
+.sub-office-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 28px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.sub-office-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+  border-color: rgba(235, 83, 16, 0.25);
+}
+.sub-office-city {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 6px;
+}
+.sub-office-type {
+  display: inline-block;
+  background: rgba(235, 83, 16, 0.1);
+  color: var(--ul-primary);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.sub-office-meta {
+  font-size: 14px;
+  color: var(--ul-gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.sub-office-meta div {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.sub-office-meta i {
+  color: var(--ul-primary);
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+/* Direct Department Routing Cards */
+.sub-dept-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.sub-dept-card:hover {
+  border-color: var(--ul-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(235, 83, 16, 0.07);
+}
+.sub-dept-title {
+  font-family: var(--font-quicksand);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ul-black);
+  margin-bottom: 3px;
+}
+.sub-dept-sla {
+  font-size: 12.5px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Whistleblower & Ethics Channel */
+.sub-whistleblower-box {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 18px;
+  padding: 28px 24px;
+  position: relative;
+}
+
